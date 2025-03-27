@@ -1,0 +1,61 @@
+/* Reset margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tiêu đề */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Bảng dữ liệu */
+.employee-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Định dạng tiêu đề bảng */
+.employee-table thead {
+    background: #007bff;
+    color: white;
+}
+
+.employee-table th, .employee-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Dòng chẵn có màu nền xám nhạt */
+.employee-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Hover hiệu ứng */
+.employee-table tbody tr:hover {
+    background: #e1f5fe;
+}
+
+/* Cột tiền lương in đậm */
+.employee-table td:last-child {
+    font-weight: bold;
+    color: #d9534f;
+}
