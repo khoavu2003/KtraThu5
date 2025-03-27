@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông Tin Nhân Viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Reset margin & padding */
         * {
@@ -92,7 +93,9 @@
     </div>
     <h2 class="title">THÔNG TIN NHÂN VIÊN</h2>
     <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'): ?>
-        <a href="/Ktra/Employee/add" class="add-btn">+ Thêm Nhân Viên</a>
+        <div class="d-flex justify-content-end">
+            <a href="/Ktra/Employee/add" class="btn btn-primary fw-bold px-4 py-2 shadow-sm rounded">+ Thêm Nhân Viên</a>
+        </div>
     <?php endif; ?>
     <table class="employee-table">
         <thead>
@@ -134,7 +137,7 @@
     </table>
 
     <!-- Phân trang -->
-    <div class="pagination">
+    <div class="pagination justify-content-center">
         <?php if ($page > 1): ?>
             <a href="?page=<?= $page - 1 ?>">&laquo; Trước</a>
         <?php endif; ?>
@@ -178,10 +181,3 @@
 </body>
 
 </html>
-<script>
-    function confirmDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa nhân viên này?")) {
-            window.location.href = "/Ktra/Employee/delete/" + id;
-        }
-    }
-</script>
